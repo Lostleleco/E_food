@@ -3,13 +3,13 @@ import { Cores } from '../../styles'
 
 export const Top = styled.div`
   background-color: ${Cores.bege};
-  width: 100%; /* Ou qualquer largura desejada */
+  width: 100%;
   height: 384px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os itens horizontalmente */
-  justify-content: center; /* Centraliza os itens verticalmente */
-  position: relative; /* Necessário para o posicionamento do Titulo */
+  align-items: center;
+  justify-content: center;
+  position: relative;
 `
 
 export const Logo = styled.img`
@@ -27,4 +27,8 @@ export const Titulo = styled.h1`
   height: 84px;
   text-align: center;
   margin: 0 auto;
+  font-weight: bold;
+  font-family: 'Roboto', system-ui;
+  font-size: 36px;
+  line-height: 42.19px;
 `
