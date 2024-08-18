@@ -91,6 +91,23 @@ export const Subtitulo = styled.div`
   padding: 5px;
   text-align: center;
 `
+
+export const Destaque = styled.div`
+  position: absolute;
+  background-color: ${Cores.botoes1};
+  color: ${Cores.bege};
+  font-family: 'Roboto', system-ui;
+  font-weight: bold;
+  font-size: 12px;
+  width: 61px;
+  height: 16px;
+  right: 30px;
+  border: none;
+  left: 393px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+`
 export const Star = styled.img`
   width: 21px;
   height: 20px;

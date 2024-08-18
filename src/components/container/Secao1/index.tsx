@@ -7,10 +7,12 @@ import {
   Avaliacao,
   TA,
   Subtitulo,
-  Star
+  Star,
+  Destaque
 } from './styles'
 
 export type CardProps = {
+  destaque: boolean
   avaliacao: number
   tag: string
   titulo: string
@@ -20,6 +22,7 @@ export type CardProps = {
 }
 
 export function Card({
+  destaque,
   avaliacao,
   tag,
   titulo,
@@ -30,6 +33,8 @@ export function Card({
   return (
     <Container>
       <Imagem src={imagem} alt="Imagem de sushi" />
+
+      {destaque ? <Destaque>Destaque da Semana</Destaque> : null}
       <Subtitulo>{tag}</Subtitulo>
       <TA>
         <TituloCard>{titulo}</TituloCard>

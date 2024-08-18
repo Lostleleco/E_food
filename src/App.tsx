@@ -6,6 +6,7 @@ import { Card } from './components/container/Secao1/index'
 
 function App() {
   const cardOne = {
+    destaque: true,
     avaliacao: 4.9,
     tag: 'italiana',
     titulo: 'Hioki Sushi',
@@ -16,6 +17,7 @@ function App() {
   }
 
   const cardtwo = {
+    destaque: false,
     avaliacao: 4.5,
     tag: 'japonesa',
     titulo: 'La Dolce Vita Trattoria',
@@ -25,6 +27,7 @@ function App() {
     star: image3
   }
   const cardtree = {
+    destaque: false,
     avaliacao: 4.6,
     tag: 'japonesa',
     titulo: 'La Dolce Vita Trattoria',
@@ -34,6 +37,7 @@ function App() {
     star: image3
   }
   const cardfour = {
+    destaque: false,
     avaliacao: 4.5,
     tag: 'japonesa',
     titulo: 'La Dolce Vita Trattoria',
@@ -43,6 +47,7 @@ function App() {
     star: image3
   }
   const cardfive = {
+    destaque: false,
     avaliacao: 4.5,
     tag: 'japonesa',
     titulo: 'La Dolce Vita Trattoria',
@@ -52,6 +57,7 @@ function App() {
     star: image3
   }
   const cardsix = {
+    destaque: false,
     avaliacao: 4.5,
     tag: 'japonesa',
     titulo: 'La Dolce Vita Trattoria',
