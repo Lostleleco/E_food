@@ -4,7 +4,10 @@ import {
   TituloCard,
   Imagem,
   Botao,
-  Avaliacao
+  Avaliacao,
+  TA,
+  Subtitulo,
+  Star
 } from './styles'
 
 export type CardProps = {
@@ -13,16 +16,28 @@ export type CardProps = {
   titulo: string
   descricao: string
   imagem: string
+  star: string
 }
-export function Card({ avaliacao, tag, titulo, descricao, imagem }: CardProps) {
+
+export function Card({
+  avaliacao,
+  tag,
+  titulo,
+  descricao,
+  imagem,
+  star
+}: CardProps) {
   return (
     <Container>
-      <Avaliacao>{avaliacao}</Avaliacao>
       <Imagem src={imagem} alt="Imagem de sushi" />
-      <TituloCard>{titulo}</TituloCard>
+      <Subtitulo>{tag}</Subtitulo>
+      <TA>
+        <TituloCard>{titulo}</TituloCard>
+        <Avaliacao>{avaliacao}</Avaliacao>
+        <Star src={star} alt="estrela" />
+      </TA>
       <Texto>{descricao}</Texto>
       <Botao>Saiba mais</Botao>
-      <div>{tag}</div>
     </Container>
   )
 }
