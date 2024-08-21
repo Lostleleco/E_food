@@ -99,11 +99,11 @@ export const Destaque = styled.div`
   font-family: 'Roboto', system-ui;
   font-weight: bold;
   font-size: 12px;
-  width: 61px;
+  width: 121px;
+
   height: 16px;
-  right: 30px;
   border: none;
-  left: 393px;
+  left: 250px;
   margin: 10px;
   padding: 5px;
   text-align: center;
