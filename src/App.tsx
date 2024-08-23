@@ -2,8 +2,8 @@ import image1 from './components/container/assets/firstpag/image1.png'
 import image3 from './components/container/assets/firstpag/Dribbble-Light-Preview.png'
 import image4 from './components/container/assets/firstpag/imagem4.png'
 import Header from './components/Header/index'
-import { CardPrincipal, Star } from './components/container/Secao1/styles'
-import { Card } from './components/container/Secao1/index'
+import { CardPrincipal } from './components/Pages/Home/styles'
+import { Card } from './components/Pages/Home/index'
 import Footer from './components/Footer/index'
 
 function App() {

@@ -3,8 +3,8 @@ import { Cores } from '../../styles'
 
 export const Top = styled.div`
   background-color: ${Cores.bege};
-  padding: 40px;
-  width: 100%;
+  padding: 60px;
+  width: 1024;
   height: 298px;
   display: flex;
   flex-direction: column;
@@ -22,18 +22,6 @@ export const Logo = styled.img`
   gap: 0px;
 `
 
-export const Titulo = styled.h1`
-  color: ${Cores.escrita1};
-  width: 100%;
-  height: 384px;
-  padding-top: 40px;
-  text-align: center;
-  margin: 0 auto;
-  font-weight: bold;
-  font-family: 'Roboto', system-ui;
-  font-size: 36px;
-  line-height: 42.19px;
-`
 export const Plataforma = styled.footer`
   background-color: ${Cores.bege};
   color: ${Cores.escrita1};

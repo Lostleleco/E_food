@@ -10,6 +10,7 @@ export const CardPrincipal = styled.div`
   max-width: 1024px;
   margin: 15px auto;
   padding-top: 100px;
+  padding-bottom: 100px;
   box-sizing: border-box;
 `
 
