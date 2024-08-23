@@ -32,3 +32,6 @@ export const Titulo = styled.h1`
   font-size: 36px;
   line-height: 42.19px;
 `
+export const Flex = styled.div`
+  display: flex;
+`

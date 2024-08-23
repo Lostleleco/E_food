@@ -2,7 +2,7 @@ import image1 from './components/container/assets/firstpag/image1.png'
 import image3 from './components/container/assets/firstpag/Dribbble-Light-Preview.png'
 import image4 from './components/container/assets/firstpag/imagem4.png'
 import Header from './components/Header/index'
-import { CardPrincipal } from './components/container/Secao1/styles'
+import { CardPrincipal, Star } from './components/container/Secao1/styles'
 import { Card } from './components/container/Secao1/index'
 import Footer from './components/Footer/index'
 
@@ -15,7 +15,7 @@ function App() {
     descricao:
       ' Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     imagem: image4,
-    star: image4
+    star: image3
   }
 
   const cardtwo = {
