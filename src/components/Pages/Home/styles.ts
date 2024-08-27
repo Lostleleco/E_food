@@ -31,7 +31,7 @@ export const Container = styled.section`
 export const Imagem = styled.img`
   width: 472px;
   height: 217px;
-  object-fit: cover;
+
   position: relative;
 `
 
@@ -59,6 +59,7 @@ export const Botao = styled.button`
   width: 82px;
   height: 24px;
   border: none;
+  cursor: pointer;
 `
 
 export const Avaliacao = styled.div`

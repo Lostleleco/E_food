@@ -19,6 +19,7 @@ export type CardProps = {
   descricao: string
   imagem: string
   star: string
+  onClick: () => void
 }
 
 export function Card({
@@ -28,12 +29,14 @@ export function Card({
   titulo,
   descricao,
   imagem,
-  star
+  star,
+  onClick
 }: CardProps) {
   return (
-    <Container>
+    <Container onClick={onClick}>
+      {' '}
+      {/* Aplicando a função onClick */}
       <Imagem src={imagem} alt="Imagem de sushi" />
-
       {destaque ? <Destaque>Destaque da Semana</Destaque> : null}
       <Subtitulo>{tag}</Subtitulo>
       <TA>
