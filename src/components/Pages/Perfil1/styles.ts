@@ -9,6 +9,7 @@ export const Header = styled.div`
   top: -23px;
 `
 export const Logo = styled.img`
+  cursor: pointer;
   width: 125px;
   height: 57.5px;
   display: block;
@@ -17,6 +18,7 @@ export const Logo = styled.img`
   padding-top: 63px;
 `
 export const Menu = styled.h3`
+  cursor: pointer;
   font-size: 18px;
   font-family: 'Roboto';
   font-weight: 900;
@@ -59,6 +61,7 @@ export const Dolce = styled.h1`
 
 export const CardsContainer = styled.div`
   display: grid;
+  padding-bottom: 120px;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-left: 17%;
