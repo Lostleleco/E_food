@@ -14,6 +14,26 @@ const ModalContainer = styled.div`
   padding: 20px;
   display: flex;
 `
+
+const CloseButton = styled.button`
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 1040px;
+  gap: 0px;
+  color: #fff;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1;
+  }
+`
+
 const Titulo = styled.h2`
   width: 140px;
   height: 21px;
@@ -23,6 +43,7 @@ const Titulo = styled.h2`
   line-height: 21.09px;
   color: #ffffff;
 `
+
 const Texto = styled.p`
   width: 656px;
   height: 176px;
@@ -32,6 +53,7 @@ const Texto = styled.p`
   line-height: 22px;
   color: #ffffff;
 `
+
 const Obs = styled.p`
   font-family: 'Roboto';
   font-weight: 400;
@@ -39,6 +61,7 @@ const Obs = styled.p`
   line-height: 22px;
   color: #ffffff;
 `
+
 const ModalImage = styled.img`
   width: 280px;
   height: 280px;
@@ -72,16 +95,17 @@ interface ModalProps {
   pizza: string | null
 }
 
-const Modal: React.FC<ModalProps> = ({ onConfirm, pizza }) => {
+const Modal: React.FC<ModalProps> = ({ onClose, onConfirm, pizza }) => {
   if (!pizza) return null
 
   return (
     <ModalContainer>
+      <CloseButton onClick={onClose}>X</CloseButton>
       <ModalImage src={pizzaImage} alt="Pizza" />
       <ModalContent>
         <Titulo>Pizza Marguerita</Titulo>
         <Texto>
-          A Textoizza Margherita é uma pizza clássica da culinária italiana,
+          A Pizza Margherita é uma pizza clássica da culinária italiana,
           reconhecida por sua simplicidade e sabor inigualável. Ela é feita com
           uma base de massa fina e crocante, coberta com molho de tomate fresco,
           queijo mussarela de alta qualidade, manjericão fresco e azeite de

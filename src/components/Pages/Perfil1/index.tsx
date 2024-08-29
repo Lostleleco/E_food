@@ -17,12 +17,13 @@ import {
   Menu
 } from './styles'
 import Footer from '../../Footer'
-
 import Modal from './Modal'
+import Aside from './Aside'
 
 function Perfil1() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedPizza, setSelectedPizza] = useState<string | null>(null)
+  const [isAsideVisible, setIsAsideVisible] = useState(false)
   const cartItems = useSelector((state: RootState) => state.cart.items)
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -40,6 +41,7 @@ function Perfil1() {
   const handleConfirmPurchase = () => {
     if (selectedPizza) {
       dispatch(addToCart(selectedPizza))
+      setIsAsideVisible(true)
       handleCloseModal()
     }
   }
@@ -82,6 +84,8 @@ function Perfil1() {
           pizza={selectedPizza}
         />
       )}
+
+      <Aside isVisible={isAsideVisible} pizza={selectedPizza} />
     </div>
   )
 }
