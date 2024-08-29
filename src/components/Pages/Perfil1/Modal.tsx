@@ -6,8 +6,8 @@ import { Cores } from '../../../styles'
 const ModalContainer = styled.div`
   position: fixed;
   top: 490px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 47%;
+  transform: translate(-49%, -49%);
   width: 1024px;
   height: 344px;
   background: ${Cores.botoes1};
