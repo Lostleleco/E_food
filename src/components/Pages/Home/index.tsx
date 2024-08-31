@@ -35,7 +35,6 @@ export function Card({
   return (
     <Container onClick={onClick}>
       {' '}
-      {/* Aplicando a função onClick */}
       <Imagem src={imagem} alt="Imagem de sushi" />
       {destaque ? <Destaque>Destaque da Semana</Destaque> : null}
       <Subtitulo>{tag}</Subtitulo>
