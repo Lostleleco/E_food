@@ -1,24 +1,35 @@
-import styled from 'styled-components'
-import pastaBanner from '../../assets/images/pasta_banner.png'
-import { cores } from '../../styles'
+import styled from "styled-components";
+import fundo from "../../assets/images/fundo.png";
+import { breakpoints, cores } from "../../Global";
 
-export const BannerContainer = styled.div`
-  height: 280px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${pastaBanner});
+export const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 384px;
+  margin-bottom: 80px;
+
+  background-image: url(${fundo});
   background-size: cover;
-  background-repeat: no-repeat;
-  color: ${cores.branco};
 
-  h3 {
-    font-size: 32px;
-    font-weight: 100;
-    padding-top: 24px;
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 100%;
   }
+`;
 
-  h2 {
-    margin-top: 152px;
-    font-size: 32px;
-    font-weight: 900;
+export const H1 = styled.h1`
+  text-align: center;
+
+  font-weight: 900;
+  width: 539px;
+  height: 84px;
+  font-size: 36px;
+
+  color: ${cores.vermelho};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 359px;
   }
-`
+`;

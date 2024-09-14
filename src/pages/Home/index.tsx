@@ -1,16 +1,48 @@
-import Hero from '../../components/Hero'
-import Footer from '../../containers/Footer'
-import ListaRestaurantes from '../../containers/ListaRestaurantes'
-import { Container } from '../../styles'
+import Banner from "../../Components/Banner";
+import ClockSpinner from "../../Components/ClockSpinner";
 
-const Home = () => (
-  <>
-    <Hero />
-    <Container>
-      <ListaRestaurantes />
-    </Container>
-    <Footer />
-  </>
-)
+import RestaurantList from "../../Components/RestaurantList";
+import { useGetRestaurantsQuery } from "../../services/api";
 
-export default Home
+export type restaurantsType = {
+  id: number;
+  titulo: string;
+  destaque: boolean;
+  tipo: string;
+  avaliacao: number;
+  descricao: string;
+  capa: string;
+
+  cardapio: [
+    {
+      id: number;
+      foto: string;
+      preco: number;
+      nome: string;
+      descricao: string;
+      porcao: string;
+    }
+  ];
+};
+
+const Home = () => {
+  const { data: restaurants } = useGetRestaurantsQuery();
+
+  if (restaurants) {
+    return (
+      <>
+        <Banner />
+        <RestaurantList restaurants={restaurants} />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Banner />
+      <ClockSpinner />
+    </>
+  );
+};
+
+export default Home;

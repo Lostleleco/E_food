@@ -1,13 +1,11 @@
-import { Container } from '../../styles'
-import { BannerContainer } from './styles'
+import * as S from './styles'
+import logo from '../../assets/images/logo.svg'
 
 const Banner = () => (
-  <BannerContainer>
-    <Container>
-      <h3>Italiana</h3>
-      <h2>La Dolce Vita Trattoria</h2>
-    </Container>
-  </BannerContainer>
+    <S.Banner>
+        <img src={logo} alt="Efood Logo"/>
+        <S.H1>Viva experiências gastronômicas no conforto da sua casa</S.H1>
+    </S.Banner>
 )
 
 export default Banner
