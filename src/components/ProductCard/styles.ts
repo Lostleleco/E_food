@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const Card = styled.li`
   background-color: var(--mainColor);
@@ -64,6 +65,9 @@ export const Modal = styled.div`
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.8);
   }
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
 `
 
 export const ModalContent = styled.div`
@@ -94,6 +98,9 @@ export const ModalContent = styled.div`
     width: 280px;
     object-fit: cover;
     margin-right: 24px;
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
   }
 
   div {

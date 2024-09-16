@@ -25,6 +25,9 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    @media(max-width: ${breakpoints.desktop}) {
+      max-width: 80%;
+    }
   }
 `
 

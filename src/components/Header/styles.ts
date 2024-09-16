@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import backgroundImage from '../../assets/images/header-vector.svg'
 import { Link } from 'react-router-dom'
+import { breakpoints } from '../../styles'
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -22,6 +23,9 @@ export const HeaderWrapper = styled.header`
     h4 {
       cursor: pointer;
     }
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
   }
 `
 
