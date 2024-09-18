@@ -1,35 +1,32 @@
-import Footer from '../../components/Footer'
-import Hero from '../../components/Hero'
-import RestaurantsList from '../../components/RestaurantsList'
+import { Link } from 'react-router-dom'
 
-export type Restaurant = {
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: number
-  descricao: string
-  capa: string
-  cardapio: Menu[]
-}
+import CategorytList from '../../components/view/CategoryList'
+import Footer from '../../components/ui/Footer'
 
-export interface Menu {
-  foto: string
-  preco: number
-  id: number
-  nome: string
-  descricao: string
-  porcao: string
-}
+import { HeaderContainer } from './styles'
+import { Logo } from '../../styles'
 
-const Home = () => {
-  return (
-    <>
-      <Hero />
-      <RestaurantsList />
-      <Footer />
-    </>
-  )
-}
+import logoImage from '../../assets/images/logo.svg'
+
+const Home = () => (
+  <>
+    <HeaderContainer>
+      <h1>
+        <Link to="/" title="Home">
+          <Logo src={logoImage} alt="EFOOD" />
+        </Link>
+      </h1>
+      <h2>
+        Viva experiências gastronômicas
+        <br />
+        no conforto da sua casa
+      </h2>
+    </HeaderContainer>
+    <main>
+      <CategorytList />
+    </main>
+    <Footer />
+  </>
+)
 
 export default Home

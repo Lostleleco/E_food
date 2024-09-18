@@ -1,13 +1,15 @@
-import { Route, Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
+import Perfil from './pages/Perfil'
 import Home from './pages/Home'
-import Profile from './pages/Profile'
 
-const PageRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/profile/:id" element={<Profile />} />
-  </Routes>
-)
+const RoutesProvider = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/perfil/:id" element={<Perfil />} />
+    </Routes>
+  )
+}
 
-export default PageRoutes
+export default RoutesProvider

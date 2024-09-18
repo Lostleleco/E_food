@@ -1,18 +1,21 @@
 import { BrowserRouter } from 'react-router-dom'
-import PageRoutes from './routes'
-import { GlobalStyles } from './styles'
-import Cart from './components/Cart'
 import { Provider } from 'react-redux'
-import { store } from './store'
+
+import GlobalStyle from './styles'
+
+import RoutesProvider from './routes'
+import { persistor, store } from './store'
+import { PersistGate } from 'redux-persist/integration/react'
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <GlobalStyles />
-        <PageRoutes />
-        <Cart />
-      </BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <GlobalStyle />
+          <RoutesProvider />
+        </BrowserRouter>
+      </PersistGate>
     </Provider>
   )
 }
